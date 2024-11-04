@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>24 Game</h1>
+        <p>ใช้การดำเนินการทางคณิตศาสตร์ (+, -, *, /, (), และตัวเลขที่กำหนด) เพื่อให้ได้ค่า 24</p>
+        <div class="numbers">
+            <span id="num1" onclick="addToExpression(numbers[0])"></span>
+            <span id="num2" onclick="addToExpression(numbers[1])"></span>
+            <span id="num3" onclick="addToExpression(numbers[2])"></span>
+            <span id="num4" onclick="addToExpression(numbers[3])"></span>
+        </div>
+        <div class="operators">
+            <button type="button" onclick="addToExpression('+')">+</button>
+            <button type="button" onclick="addToExpression('-')">-</button>
+            <button type="button" onclick="addToExpression('*')">*</button>
+            <button type="button" onclick="addToExpression('/')">/</button>
+            <button type="button" onclick="addToExpression('(')">(</button>
+            <button type="button" onclick="addToExpression(')')">)</button>
+        </div>
+        <input type="text" id="expression" placeholder="กรอกสมการที่นี่" readonly />
+        <button type="button" onclick="checkSolution()">ตรวจสอบ</button>
+        <button type="button" onclick="generateNumbers()">สุ่มเลขใหม่</button>
+        <button type="button" onclick="clearExpression()">ล้าง</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
